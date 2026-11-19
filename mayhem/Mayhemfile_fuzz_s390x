@@ -1,0 +1,9 @@
+project: savantenvs/cpu_features
+target: fuzz_s390x
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_s390x/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_s390x
+    libfuzzer: true
+    timeout: 5

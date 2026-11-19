@@ -1,0 +1,9 @@
+project: savantenvs/cpu_features
+target: fuzz_ppc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ppc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ppc
+    libfuzzer: true
+    timeout: 5

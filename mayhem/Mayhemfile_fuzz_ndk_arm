@@ -1,0 +1,9 @@
+project: savantenvs/cpu_features
+target: fuzz_ndk_arm
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ndk_arm/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ndk_arm
+    libfuzzer: true
+    timeout: 5

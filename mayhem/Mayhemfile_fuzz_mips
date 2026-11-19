@@ -1,0 +1,9 @@
+project: savantenvs/cpu_features
+target: fuzz_mips
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_mips/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_mips
+    libfuzzer: true
+    timeout: 5
